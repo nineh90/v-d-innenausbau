@@ -1,0 +1,12 @@
+h1{
+    font-size: 54px;
+    color: white;
+    background: rgb(123 108 91);
+    padding: 25px;
+    border-radius: 24px;
+    box-shadow: 2px 2px 2px 0px black;
+}
+
+h2{
+    font-size: 38px;
+}
