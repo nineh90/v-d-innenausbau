@@ -135,13 +135,7 @@ a:hover {
     background-image: url(../img/header.png);
 }
 
-.index-nav-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .navbar-container a{
     text-decoration: none;
@@ -157,12 +151,6 @@ a:hover {
     box-shadow: 2px 2px 0px 0px black;
     margin: 6px;
     text-align: center;
-}
-
-.index-nav-container a:hover{
-    text-decoration: underline;
-    color: lightgray;
-    
 }
 
 .index-nav-container nav{
@@ -259,7 +247,7 @@ a:hover {
 
 /* Icon 3 */
 
-#menu-icon {
+#menuIcon {
     width: 60px;
     height: 45px;
     position: absolute;
@@ -276,7 +264,7 @@ a:hover {
     cursor: pointer;
   }
   
-  #menu-icon span {
+  #menuIcon span {
     display: block;
     position: absolute;
     height: 9px;
@@ -295,39 +283,39 @@ a:hover {
     transition: .25s ease-in-out;
   }
 
-#menu-icon span:nth-child(1) {
+#menuIcon span:nth-child(1) {
     top: 0px;
   }
   
-  #menu-icon span:nth-child(2),#menu-icon span:nth-child(3) {
+  #menuIcon span:nth-child(2),#menuIcon span:nth-child(3) {
     top: 18px;
   }
   
-  #menu-icon span:nth-child(4) {
+  #menuIcon span:nth-child(4) {
     top: 36px;
   }
   
-  #menu-icon.open span:nth-child(1) {
+  #menuIcon.open span:nth-child(1) {
     top: 18px;
     width: 0%;
     left: 50%;
   }
   
-  #menu-icon.open span:nth-child(2) {
+  #menuIcon.open span:nth-child(2) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   
-  #menu-icon.open span:nth-child(3) {
+  #menuIcon.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
   
-  #menu-icon.open span:nth-child(4) {
+  #menuIcon.open span:nth-child(4) {
     top: 18px;
     width: 0%;
     left: 50%;
@@ -337,4 +325,86 @@ a:hover {
     margin-top: 12px;
     margin-bottom: 6px;
     font-size: 12px;
+  }
+
+  @media(max-width: 1024px){
+    .navbar-container{
+        width: 50%;
+    }
+    h1{
+        font-size: 43px;
+    }
+  }
+  
+  @media(max-width: 768px){
+    #menuIcon{
+        width: 50px;
+        height: 45px;
+    }
+    .logo-header {
+        width: 240px;
+    }
+
+  }
+  
+  @media(max-width: 768px){
+    #menuIcon {
+        width: 35px;
+        height: 30px;
+    }
+    #menuIcon span{
+        height: 5px;
+    }
+    .logo-header {
+        width: 160px;
+    }
+
+  }
+
+  @media(max-width: 425px){
+    .header-content-top{
+        height: 15vh;
+
+    }
+
+    .header-container{
+        height: 55vh;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        width: 90%;
+    }
+    .navbar-container {
+        width: 100%;
+    }
+    .content-image {
+        width: 320px;
+    }
+    #menuIcon span {
+        height: 3px;
+    }
+    .header-content-top {
+        justify-content: flex-end;
+    }
+    .logo-header{
+        margin-right: 14px;
+    }
+    
+  }
+
+  @media(max-width: 375px){
+    .mobile-hide-375{
+        display: none;
+    }
+    .google-iframe{
+        height: 20vh;
+    }
+   
+  }
+  
+  @media(max-width: 320px){
+    .content-image {
+        width: 260px;
+    }
   }

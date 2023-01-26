@@ -14,7 +14,7 @@ function openPageMenu(){
     document.body.classList.add('body-overflow-hidden');
     document.getElementById('navigation').style.display = 'flex';
     document.getElementById('overlay').style.display = 'flex';
-    const navIcon = document.getElementById('menu-icon');
+    const navIcon = document.getElementById('menuIcon');
     if (navIcon.classList.contains('open')) {
         closePageMenu();
     } else {
@@ -26,5 +26,5 @@ function closePageMenu(){
     document.body.classList.remove('body-overflow-hidden');
     document.getElementById('navigation').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
-    document.getElementById('menu-icon').classList.remove('open');
+    document.getElementById('menuIcon').classList.remove('open');
 }
