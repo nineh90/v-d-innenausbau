@@ -13,11 +13,11 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -25,19 +25,49 @@
     <link rel="stylesheet" href="./assets/css/font-face.css">
     <link rel="stylesheet" href="./assets/css/font-sice.css">
     <script src="./assets/javascript/main.js"></script>
+    <script src="./assets/javascript/img-gal.js"></script>
     <title>V+D Innenausbau</title>
 </head>
 <body>
 <!--Header-->    
     <div w3-include-html="./assets/template/header-big.html"></div>
-    <!--Navbar-->
-        <div w3-include-html="./assets/template/navbar.html"></div>
+<!--Navbar-->
+    <div w3-include-html="./assets/template/navbar.html"></div>
 <!--Page Content-->
-    <div w3-include-html="./assets/template/bodenbelaege-template.html"></div>
+    <div class="content-container">
+        <h2>Bildergallerie</h2>
+        <p>
+            Hier sehen Sie unter anderem Vorbereitungsarbeiten für den Trockenbau und bekommen so 
+            einen Einblick in unsere Arbeit.<br>
+            <br>
+            Für ein unverbindliches Angebot nehmen Sie gerne <a href="./kontakt.html"><b>Kontakt</b></a> mit uns auf.<br> 
+         </p>
+        <div>
+            <div id="imageContainer"  class="image-container"></div>
+        </div>    
+        <div id="imageOverlay">
+            <div class="container-width">
+                <div class="">
+                    <img onclick="closeImage()" class="cross mobile-hide-325" src="./assets/img/cross.png" alt="">
+                </div>
+                <div class="align-center">
+                    <div onclick="previousImage()" id="leftArrow" class="triangle mobile-hide-325"></div>
+                        <img id="currentImage" class="current-image" src="" alt="">
+                    <div onclick="nextImage()" id="rightArrow" class="triangle rotate mobile-hide-325"></div>
+                </div> 
+                <div class="mobile-device">
+                    <div onclick="previousImage()" id="leftArrow" class="triangle"></div>
+                    <img onclick="closeImage()" class="cross-mobile" src="./assets/img/cross.png" alt="">
+                    <div onclick="nextImage()" id="rightArrow" class="triangle rotate"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 <!--Footer-->
     <div w3-include-html="./assets/template/footer.html"></div>
     <script>
         includeHTML();
+        renderImageGallery();
     </script>
 </body>
 </html>
