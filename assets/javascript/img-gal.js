@@ -47,7 +47,7 @@ function previousImage(){
     }
     if(currentImageCounter < 0){
         currentImage.src = images[images.length - 1];
-        currentImageCounter = images.length;
+        currentImageCounter = images.length - 1 ;
     }
 }
 
