@@ -524,6 +524,9 @@ a:hover {
     .content-image {
         width: 320px;
     }
+    .spatula {
+        max-width: 175px;
+    }
     
   }
 
@@ -540,5 +543,14 @@ a:hover {
   @media(max-width: 320px){
     .content-image {
         width: 260px;
+    }
+    .opening-time-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: none;
+        padding: 0px;
+        border-radius: 0px;
+        font-size: 16px;
     }
   }

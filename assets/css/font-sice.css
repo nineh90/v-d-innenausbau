@@ -57,6 +57,11 @@ h3{
     .content-image {
         width: 260px;
     }
-    
+    .opening-time-container {
+        box-shadow: none;
+        padding: 6px;
+        border-radius: 0px;
+        font-size: 16px;
+    }
     
 }  
